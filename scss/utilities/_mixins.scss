@@ -62,3 +62,30 @@
     @content;
 	}
 }
+
+// Media quries
+@mixin mq($size){
+	@if $size == "small"{
+		@media (max-width: $breakpoint-sm){
+			@content;
+		}
+	}
+	@else if $size == "medium"{
+		@media (min-width: $breakpoint-sm + 1) and (max-width: $breakpoint-md){
+			@content;
+		}
+	}
+	@else if $size == "large"{
+		@media (min-width: $breakpoint-md + 1) and (max-width: $breakpoint-lg){
+			@content;
+		}
+	}
+	@else if $size == "x-large"{
+		@media (min-width: $breakpoint-lg + 1){
+			@content;
+		}
+	}
+	@else {
+		@error "Invalid breakpoint defined `#{$size}`";
+	}
+}
