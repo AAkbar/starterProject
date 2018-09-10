@@ -4,7 +4,7 @@
 
 // Calculate grid columns
 
-@media (min-width: 769px) {
+@include mq(medium) {
   @for $i from 1 through $g-col-count {
     $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
     $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
@@ -19,11 +19,11 @@
 // Column styles
 
 [class^="grid__col--"] {
-  @media (min-width: 1px) and (max-width: 768px) {
+  @include mq(small) {
     margin-top: em(12px);
     margin-bottom: em(12px);
   }
-  @media (min-width: 769px) {
+  @include mq(medium) {
     @include doubly(percentage($g-gutter-width / $context));    
     float: left;
     min-height: 1px;

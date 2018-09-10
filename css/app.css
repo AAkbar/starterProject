@@ -14,7 +14,7 @@
   position: absolute;
   width: 1px; }
 
-[class^="btn--"] {
+.panel--centered, .panel--padded--centered, [class^="btn--"] {
   text-align: center; }
 
 .centered, .grid {
@@ -379,6 +379,14 @@ table {
 td,
 th {
   padding: 0; }
+
+.panel, .panel--centered {
+  padding-top: 1.875em;
+  padding-bottom: 1.25em; }
+
+.panel--padded, .panel--padded--centered {
+  padding-top: 5em;
+  padding-bottom: 2.125em; }
 
 .grid {
   width: 90%; }
