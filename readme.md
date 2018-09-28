@@ -6,7 +6,11 @@ The link [https://github.com/aakbar/starterProject](https://github.com/aakbar/st
 ```bash
 git clone https://github.com/aakbar/starterProject
 ```
-
+## Global packages
+> ## __Gulp-cli__ must be downloaded globally
+```bash
+npm i -g gulp-cli
+```
 ---
 ## DevDependencies that must be Downloaded: 
 * Gulp
